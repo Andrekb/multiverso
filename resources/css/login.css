@@ -1,0 +1,81 @@
+/* login page */
+
+.forgot {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-align: right;
+    margin: 0 10px 0 0;
+    transition: 0.3s;
+}
+
+.forgot:hover {
+    color: #86694f;
+}
+
+.logo-center {
+    width: 100%;
+    max-width: 120px;
+    align-self: center;
+    display: block;
+    margin: 0 0 40px 0;
+}
+
+.form-block {
+    padding: 20px;
+    max-width: 360px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+.input-block {
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.input-block label {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    color: #86694f;
+}
+
+.input-block input {
+    width: 90%;
+    border: 0;
+    background: #fff;
+    padding: 20px 5%;
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    border: 1px solid #86694f;
+    border-radius: 3px;
+    outline: none;
+}
+
+.error {
+    width: 100%;
+    background: #d63030;
+    border: 1px solid #d63030;
+    padding: 5px 0;
+    text-indent: 20px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin: -5px 0 5px 0;
+}
+
+.error li {
+    color: #fff;
+    font-weight: 900;
+}
+
+.check-block {
+    width: 90%;
+    border: 0;
+    margin: 0;
+    outline: none;
+    font-size: 0.95rem;
+    color: #86694f;
+}
+
+.check-block input {
+    margin: 0;
+}
