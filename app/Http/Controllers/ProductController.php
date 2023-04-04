@@ -26,6 +26,12 @@ class ProductController extends Controller
         return view('product.create');
     }
 
+    public function show($id): View
+    {
+        $product = Product::find($id);
+        return view('product.show', compact('product'));
+    }
+
     public function store(ProductCreateRequest $request): RedirectResponse
     {
         $product = Product::create($request->all());

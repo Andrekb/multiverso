@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,22 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
-Route::post('/login', function(Request $request){
-    $credentials = $request->only(['email', 'password']);
 
-    if(!$token = auth('api')->attempt($credentials)){
-        abort(401, 'Não autorizado');
-    }
+Route::post('/usuario', [ApiController::class, 'user'])->name('api.user');
 
-    return response()->json([
-        'data' => [
-            'token' => $token,
-            'token_type' => 'bearer',
-            'expires_id' => auth('api')->factory()->getTTL() * 60
-        ]
-        ]);
+Route::middleware('auth:api')->group(function () {
+    // Produtos
+    Route::get('/produtos', [ApiController::class, 'products'])->name('products.list');
+    Route::get('/produtos/pesquisa', [ApiController::class, 'productsSearch'])->name('products.search');
+    // Lojas
+    Route::get('/lojas', [ApiController::class, 'stores'])->name('stores.list');
+    Route::get('/lojas/pesquisa', [ApiController::class, 'storesSearch'])->name('stores.search');    
+    // Cidades    
+    Route::get('/cidades', [ApiController::class, 'cities'])->name('cities.list');
+    Route::get('/cidades/pesquisa', [ApiController::class, 'citiesSearch'])->name('cities.search');
 });

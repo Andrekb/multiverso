@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/lojas-estoque', [StoreController::class, 'stock'])->name('lojas.stock');
+    Route::get('/lojas-estoque/{id}', [StoreController::class, 'editStock'])->name('lojas.editStock');
+    Route::put('/lojas-estoque/{storeId}/produto/{productId}', [StoreController::class, 'updateStock'])->name('lojas.updateStock');
     Route::get('/produtos/{id}/images', [ProductController::class, 'images'])->name('produtos.images');
     Route::delete('/images-destroy/{id}', [ProductController::class, 'imagesDestroy'])->name('produtos.destroyImage');
     Route::post('/images-store', [ProductController::class, 'imagesStore'])->name('produtos.imagesStore');    
@@ -37,7 +39,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('/produtos', ProductController::class);
     Route::resource('/cidades', CityController::class);
     Route::resource('/lojas', StoreController::class);
-
 
 });
 

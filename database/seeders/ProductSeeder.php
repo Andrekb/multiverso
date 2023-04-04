@@ -32,8 +32,27 @@ class ProductSeeder extends Seeder
             'weight' => 4,
             'height' => 28,
             'width' => 17,
-            'lenght' => 350
-            
+            'lenght' => 350            
+        ]);
+        Product::create([
+            'name' => 'Hardanger',
+            'description' => 'O Fiorde Hardangerfjord é um dos fiordes mais impressionantes e belos da Noruega, para demonstrar tal beleza só uma de nossas mais lindas peças.',
+            'price' => 1000,
+            'headline' => 'A natureza em uma peça de madeira',
+            'weight' => 4,
+            'height' => 28,
+            'width' => 17,
+            'lenght' => 350            
+        ]);
+        Product::create([
+            'name' => 'Geiranger',
+            'description' => 'O Fiorde é um dos fiordes mais famosos e espetaculares da Noruega, localizado na região oeste do país. Com seus penhascos íngremes, cachoeiras deslumbrantes e águas cristalinasa, e nada mais justo que esta peça tenha esse nome para representar tal beleza.',
+            'price' => 1200,
+            'headline' => 'Os penhascos representados e uma única peça',
+            'weight' => 4,
+            'height' => 28,
+            'width' => 17,
+            'lenght' => 350            
         ]);
     }
 }

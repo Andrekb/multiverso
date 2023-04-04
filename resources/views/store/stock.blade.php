@@ -4,19 +4,22 @@
     </x-slot>
     <div class="flex-column list-content">
         @foreach($stores as $store)
+        <x-line-link>
+            <x-slot name="name">{{ $store->name }}</x-slot>
+            <div class="crud-buttons flex-row">
+                <a class="primary-button bg-olive" href="{{ route('lojas.editStock', $store->id) }}">
+                    alterar estoque
+                </a>
+            </div>   
+        </x-line-link>
         @if($store->products->count() > 0)
-        <div class="show-product flex-row">
+        <div class="show-product-stock flex-row">
             @foreach($store->products as $product)
-            <x-card-image>            
+            <x-card-stock>            
                 <x-slot name="image"></x-slot>
                 <x-slot name="itemName">{{ $product->name }}</x-slot>     
-                <x-slot name="itemValue">{{ number_format($product->price, 2, ',', '.') }}</x-slot>     
-                <h2>
-                    <span>unidades</span>
-                    <strong>{{ $product->pivot->stock }}</strong>
-                </h2>
-                
-            </x-card-image>
+                <x-slot name="itemValue">{{ $product->pivot->stock }} und</x-slot>
+            </x-card-stock>
             @endforeach
         </div>
         @else

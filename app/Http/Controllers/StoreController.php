@@ -8,6 +8,7 @@ use Illuminate\View\View;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\StoreCreateRequest;
 use App\Http\Requests\StoreUpdateRequest;
+use App\Http\Requests\StockUpdateRequest;
 use App\Models\Store;
 use App\Models\City;
 
@@ -62,9 +63,24 @@ class StoreController extends Controller
         }
     }
 
-    public function stock()
+    public function stock(): View
     {
         $stores = Store::all();
         return view('store.stock', compact('stores'));
+    }
+
+    public function editStock($id): View
+    {
+        $store = Store::find($id);
+        return view('store.edit_stock', compact('store'));
+    }
+
+    public function updateStock($storeId, $productId, StockUpdateRequest $request): RedirectResponse
+    {
+        $store = Store::find($storeId);
+        $store->products()->updateExistingPivot($productId, [
+            'stock' => $request->stock
+        ]);
+        return Redirect::route('lojas.editStock', $storeId)->with('status', 'stock-updated');
     }
 }

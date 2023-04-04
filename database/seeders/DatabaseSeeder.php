@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             CitySeeder::class,
             StoreSeeder::class,
             ImageSeeder::class,
+            StockSeeder::class,
         ]);
     }
 }
