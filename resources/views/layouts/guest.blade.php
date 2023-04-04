@@ -12,8 +12,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap" rel="stylesheet">
         
-        <!-- Scripts -->
-        @vite(['resources/css/reset.css', 'resources/css/akb.css', 'resources/css/login.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="http://multiverso.test/build/assets/reset-3cd4965f.css" />
+        <link rel="stylesheet" href="http://multiverso.test/build/assets/akb-b1523e1d.css" />
+        <link rel="stylesheet" href="http://multiverso.test/build/assets/login-527029ce.css" />
+        <script type="module" src="http://multiverso.test/build/assets/app-5ba92f12.js"></script>
     </head>
     <body>
         <div class="generalize flex-column flex-center fullheight">

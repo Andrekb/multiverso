@@ -15,8 +15,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js"></script>
 
         
-        <!-- Scripts -->
-        @vite(['resources/css/reset.css', 'resources/css/akb.css', 'resources/css/admin.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="http://multiverso.test/build/assets/reset-3cd4965f.css" />
+        <link rel="stylesheet" href="http://multiverso.test/build/assets/akb-b1523e1d.css" />
+        <link rel="stylesheet" href="http://multiverso.test/build/assets/admin-7d8b67a8.css" />
+        <script type="module" src="http://multiverso.test/build/assets/app-5ba92f12.js"></script>
     </head>
     <body>
         <header>
