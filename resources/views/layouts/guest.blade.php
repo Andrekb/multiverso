@@ -12,10 +12,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="http://multiverso.test/build/assets/reset-3cd4965f.css" />
-        <link rel="stylesheet" href="http://multiverso.test/build/assets/akb-b1523e1d.css" />
-        <link rel="stylesheet" href="http://multiverso.test/build/assets/login-527029ce.css" />
-        <script type="module" src="http://multiverso.test/build/assets/app-5ba92f12.js"></script>
+        <link rel="stylesheet" href="{{url('/build/assets/reset-3cd4965f.css')}}" />
+        <link rel="stylesheet" href="{{url('/build/assets/akb-b1523e1d.css')}}" />
+        <link rel="stylesheet" href="{{url('/build/assets/login-527029ce.css')}}" />
+        <link rel="stylesheet" href="{{url('/build/assets/admin-7d8b67a8.css')}}" />
+        <script type="module" src="{{url('/build/assets/app-5ba92f12.js')}}"></script>
     </head>
     <body>
         <div class="generalize flex-column flex-center fullheight">
