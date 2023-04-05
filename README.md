@@ -49,4 +49,11 @@ php artisan db:seed
 php artisan jwt:secret
 ```
 
+<<<<<<< HEAD
 > Pronto! A aplicação está funcional!
+=======
+> Pronto! A aplicação está funcional!
+
+
+
+>>>>>>> ac2c09d62da19cf07f5c9db48fd95271fa179d16
